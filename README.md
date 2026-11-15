@@ -1,1 +1,1 @@
-# income-caculator
+# income-calculator
