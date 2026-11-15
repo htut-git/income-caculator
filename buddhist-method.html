@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buddhist 25/50/25 Income Method Calculator (Sigālovāda Sutta) | BalanceLedger</title>
+  <meta name="description" content="Calculate your monthly budget using the ancient Buddhist 25/50/25 income division from the Sigālovāda Sutta. Includes guide, worked examples, and multi-currency support.">
+  <meta property="og:title" content="Buddhist 25/50/25 Income Method Calculator | BalanceLedger">
+  <meta property="og:description" content="Apply the timeless Sigālovāda Sutta 25/50/25 framework to balance living expenses, generosity, business reinvestment, and emergency reserves.">
+  <meta property="og:type" content="article">
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1101656093353916"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="/">
+        <svg class="brand-icon" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <rect width="36" height="36" rx="9" fill="#0f5132"/>
+          <path d="M10 24V12l8 5 8-5v12" stroke="#fbbf24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 24h16" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <span>BalanceLedger</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span>Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="/">Calculator</a></li>
+          <li><a class="nav-link is-active" href="/buddhist-method" aria-current="page">Buddhist 25/50/25</a></li>
+          <li><a class="nav-link" href="/50-30-20-calculator">50/30/20 Rule</a></li>
+          <li><a class="nav-link" href="/6-jars-calculator">6 Jars</a></li>
+          <li><a class="nav-link" href="/about">About</a></li>
+          <li><a class="nav-link" href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container">
+      <section class="page-hero">
+        <span class="eyebrow">Ancient Financial Wisdom</span>
+        <h1>Buddhist Method (Sigālovāda Sutta 25/50/25) Calculator</h1>
+        <p class="lead">
+          Over 2,500 years ago, the Sigālovāda Sutta outlined a four-part wealth framework for lay householders—balancing daily sustenance, generosity, productive reinvestment, and crisis protection.
+        </p>
+      </section>
+
+      <section id="budget-calculator" class="calculator-card" data-default-method="buddhist" aria-label="Buddhist 25/50/25 Budgeting Calculator">
+        <form id="calculator-form" class="calc-controls" novalidate>
+          <div class="field-group">
+            <label class="field-label" for="monthly-income">Monthly Income</label>
+            <div class="input-wrapper">
+              <span id="currency-prefix" class="currency-prefix" aria-hidden="true">$</span>
+              <input
+                id="monthly-income"
+                class="calc-input"
+                type="number"
+                inputmode="decimal"
+                min="0"
+                step="any"
+                value="3000"
+                placeholder="3000"
+              >
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="currency-select">Currency</label>
+            <select id="currency-select" class="calc-select">
+              <option value="USD" selected>$ USD — US Dollar</option>
+              <option value="MMK">K MMK — Myanmar Kyat</option>
+              <option value="THB">฿ THB — Thai Baht</option>
+              <option value="SGD">S$ SGD — Singapore Dollar</option>
+              <option value="INR">₹ INR — Indian Rupee</option>
+              <option value="EUR">€ EUR — Euro</option>
+              <option value="GBP">£ GBP — British Pound</option>
+              <option value="JPY">¥ JPY — Japanese Yen</option>
+            </select>
+          </div>
+
+          <div class="calc-action-group">
+            <button id="calculate-btn" class="btn btn-primary" type="submit">Calculate Plan</button>
+          </div>
+        </form>
+
+        <div class="method-selector-wrap">
+          <div class="method-mobile-wrap">
+            <label class="field-label" for="method-select">Budgeting Method</label>
+            <select id="method-select" class="calc-select">
+              <option value="buddhist" selected>Buddhist Method (25/50/25)</option>
+              <option value="50-30-20">The 50/30/20 Rule</option>
+              <option value="6-jars">The 6 Jars Method</option>
+              <option value="80-20">The 80/20 Rule (Pay Yourself First)</option>
+              <option value="70-20-10">The 70/20/10 Rule</option>
+            </select>
+          </div>
+
+          <div class="method-tabs" role="tablist" aria-label="Choose a budgeting method">
+            <button class="method-tab is-active" type="button" role="tab" aria-selected="true" data-method-tab="buddhist">
+              Buddhist Method (25/50/25)
+            </button>
+            <button class="method-tab" type="button" role="tab" aria-selected="false" data-method-tab="50-30-20">
+              50/30/20 Rule
+            </button>
+            <button class="method-tab" type="button" role="tab" aria-selected="false" data-method-tab="6-jars">
+              6 Jars Method
+            </button>
+            <button class="method-tab" type="button" role="tab" aria-selected="false" data-method-tab="80-20">
+              80/20 Rule
+            </button>
+            <button class="method-tab" type="button" role="tab" aria-selected="false" data-method-tab="70-20-10">
+              70/20/10 Rule
+            </button>
+          </div>
+        </div>
+
+        <div class="results-section" aria-live="polite">
+          <div class="results-header">
+            <div class="results-title-wrap">
+              <h2 id="results-method-title">Buddhist Method (Sigālovāda Sutta 25/50/25)</h2>
+              <p id="results-method-subtitle" class="results-subtitle">
+                Breakdown for $3,000 monthly income — Classical four-part wisdom adapted into a balanced three-bucket monthly allocation.
+              </p>
+            </div>
+            <div class="results-toolbar">
+              <button id="copy-breakdown-btn" class="btn btn-secondary" type="button">Copy Breakdown</button>
+              <span id="copy-feedback" class="copy-feedback" role="status" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div id="results-grid" class="results-grid has-three">
+            <article class="result-card" data-tone="emerald">
+              <div class="result-card-top">
+                <div>
+                  <h3 class="result-card-title">Living Expenses &amp; Generosity</h3>
+                  <p class="result-card-detail">Dāna, daily needs &amp; supporting family</p>
+                </div>
+                <span class="percent-badge">25%</span>
+              </div>
+              <div class="result-amount">$750</div>
+              <div class="progress-track" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-label="Living Expenses and Generosity allocation 25%">
+                <div class="progress-fill" style="width: 25%"></div>
+              </div>
+            </article>
+
+            <article class="result-card" data-tone="gold">
+              <div class="result-card-top">
+                <div>
+                  <h3 class="result-card-title">Work, Business &amp; Personal Growth</h3>
+                  <p class="result-card-detail">Reinvestment, tools &amp; skill building</p>
+                </div>
+                <span class="percent-badge">50%</span>
+              </div>
+              <div class="result-amount">$1,500</div>
+              <div class="progress-track" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Work, Business and Personal Growth allocation 50%">
+                <div class="progress-fill" style="width: 50%"></div>
+              </div>
+            </article>
+
+            <article class="result-card" data-tone="teal">
+              <div class="result-card-top">
+                <div>
+                  <h3 class="result-card-title">Emergency &amp; Future Reserve</h3>
+                  <p class="result-card-detail">Untouched safety net &amp; crisis protection</p>
+                </div>
+                <span class="percent-badge">25%</span>
+              </div>
+              <div class="result-amount">$750</div>
+              <div class="progress-track" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-label="Emergency and Future Reserve allocation 25%">
+                <div class="progress-fill" style="width: 25%"></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="method-insight">
+            <span class="method-insight-label">Who This Works Best For</span>
+            <p id="method-best-for">
+              This method works best for entrepreneurs, freelancers, and growth-minded earners who want to actively reinvest half their income into their livelihood, career, or business. It is equally ideal for household stewards who value steady generosity alongside a disciplined, untouched emergency reserve.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>How the Buddhist 25/50/25 Formula Works</h2>
+        <p>
+          In the Pāli Canon's <em>Sigālovāda Sutta</em> (Dīgha Nikāya 31), the Buddha advises a young householder named Sigāla on how to manage lawfully earned wealth sustainably. Rather than hoarding everything or spending impulsively, the discourse teaches dividing one's income into four equal quarters—two of which are devoted to one's work and livelihood.
+        </p>
+
+        <blockquote class="quote-block">
+          "One portion he uses for his enjoyment and wholesome duties; two portions he invests in his business and work; and the fourth portion he sets aside as a reserve for times of need."
+        </blockquote>
+
+        <p>
+          In modern personal finance, those four quarters map naturally to the <strong>25% / 50% / 25% formula</strong>:
+        </p>
+
+        <ul>
+          <li><strong>25% — Living Expenses &amp; Generosity (<em>Dāna</em>):</strong> Covers essential daily consumption, household upkeep, supporting parents or dependents, and mindful charitable giving without extravagance.</li>
+          <li><strong>50% — Work, Business &amp; Personal Growth:</strong> Two full quarters dedicated to expanding your earning power—reinvesting in inventory, equipment, professional training, education, or productive income-generating assets.</li>
+          <li><strong>25% — Emergency &amp; Future Reserve:</strong> Kept strictly untouched in liquid savings or conservative reserves so illness, job disruption, or economic downturns never force you into high-interest debt.</li>
+        </ul>
+
+        <h3>Worked Example: Dividing a $2,000 Monthly Income</h3>
+        <p>
+          Imagine a freelance designer or small shop owner bringing home <strong>$2,000 per month</strong> after taxes. Applying the 25/50/25 framework divides that income as follows:
+        </p>
+
+        <div class="worked-callout">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Allocation Bucket</th>
+                  <th>Formula</th>
+                  <th>Monthly Amount</th>
+                  <th>Practical Usage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Living &amp; Generosity (25%)</td>
+                  <td>$2,000 &times; 0.25</td>
+                  <td><strong>$500</strong></td>
+                  <td>Shared family expenses, modest meals, community donations</td>
+                </tr>
+                <tr>
+                  <td>Work &amp; Growth (50%)</td>
+                  <td>$2,000 &times; 0.50</td>
+                  <td><strong>$1,000</strong></td>
+                  <td>Software tools, workspace rent, marketing, professional courses</td>
+                </tr>
+                <tr>
+                  <td>Emergency Reserve (25%)</td>
+                  <td>$2,000 &times; 0.25</td>
+                  <td><strong>$500</strong></td>
+                  <td>High-yield emergency account left untouched for true crises</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p>
+          If you are a salaried worker whose employer covers business expenses, you can adapt the 50% growth bucket toward career certifications, index-fund investing, or housing equity while keeping living costs disciplined inside the first 25%—or compare it against the <a href="/50-30-20-calculator">50/30/20 Rule</a>.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Buddhist 25/50/25 Method FAQ</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What if basic rent and food cost more than 25% of my income?</summary>
+            <div class="faq-answer">
+              <p>
+                In high-rent cities, keeping living costs at 25% can be challenging on a starter salary. In that situation, temporarily treat essential housing as part of your base stability while keeping discretionary spending minimal, and channel any side-income or raises into the 50% growth and 25% reserve buckets—or test the <a href="/6-jars-calculator">6 Jars Method</a> (55% necessities) in the calculator above.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Why does the Sigālovāda Sutta allocate 50% to work and business?</summary>
+            <div class="faq-answer">
+              <p>
+                Ancient commerce and agriculture required continuous reinvestment in tools, seed, inventory, and reputation. Today, putting 50% toward productive assets, business capital, and skill mastery accelerates income growth far faster than trimming small luxuries alone.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How is generosity (<em>dāna</em>) built into this budget without overspending?</summary>
+            <div class="faq-answer">
+              <p>
+                Because giving shares the 25% living-and-enjoyment quarter rather than pulling from your emergency reserve or business capital, generosity remains joyful, sustainable, and grounded in your actual means.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">BalanceLedger</p>
+          <p class="footer-desc">
+            Combining timeless financial wisdom with fast, private, multi-currency budgeting calculators for everyday clarity.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Calculators</h2>
+          <ul class="footer-links">
+            <li><a href="/">All-in-One Calculator</a></li>
+            <li><a href="/buddhist-method">Buddhist 25/50/25 Method</a></li>
+            <li><a href="/50-30-20-calculator">50/30/20 Rule Calculator</a></li>
+            <li><a href="/6-jars-calculator">6 Jars Money Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Company &amp; Legal</h2>
+          <ul class="footer-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 BalanceLedger. Educational budgeting tools for personal planning.</span>
+        <span>Runs 100% locally in your browser.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator.js"></script>
+  <script src="/js/router.js"></script>
+</body>
+</html>

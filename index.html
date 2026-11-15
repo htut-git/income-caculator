@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Income Management &amp; Budgeting Calculator | BalanceLedger</title>
+  <meta name="description" content="Free multi-currency income calculator comparing the Buddhist 25/50/25 Sigalovada Sutta method, 50/30/20 rule, 6 Jars, 80/20, and 70/20/10 budgeting frameworks.">
+  <meta property="og:title" content="Global Income Management &amp; Budgeting Calculator | BalanceLedger">
+  <meta property="og:description" content="Instantly divide your monthly income across 5 proven budgeting methods in USD, MMK, THB, SGD, INR, EUR, GBP, and JPY.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1101656093353916"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="/">
+        <svg class="brand-icon" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <rect width="36" height="36" rx="9" fill="#0f5132"/>
+          <path d="M10 24V12l8 5 8-5v12" stroke="#fbbf24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 24h16" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <span>BalanceLedger</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span>Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link is-active" href="/" aria-current="page">Calculator</a></li>
+          <li><a class="nav-link" href="/buddhist-method">Buddhist 25/50/25</a></li>
+          <li><a class="nav-link" href="/50-30-20-calculator">50/30/20 Rule</a></li>
+          <li><a class="nav-link" href="/6-jars-calculator">6 Jars</a></li>
+          <li><a class="nav-link" href="/about">About</a></li>
+          <li><a class="nav-link" href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container">
+      <section class="page-hero">
+        <span class="eyebrow">Multi-Currency Income Planner</span>
+        <h1>Income Management &amp; Budgeting Calculator</h1>
+        <p class="lead">
+          Divide your monthly take-home pay instantly across five time-tested budgeting frameworks—from ancient Sigālovāda Sutta wisdom to modern rules like 50/30/20 and the 6 Jars system.
+        </p>
+      </section>
+
+      <section id="budget-calculator" class="calculator-card" data-default-method="buddhist" aria-label="Interactive Budgeting Calculator">
+        <form id="calculator-form" class="calc-controls" novalidate>
+          <div class="field-group">
+            <label class="field-label" for="monthly-income">Monthly Income</label>
+            <div class="input-wrapper">
+              <span id="currency-prefix" class="currency-prefix" aria-hidden="true">$</span>
+              <input
+                id="monthly-income"
+                class="calc-input"
+                type="number"
+                inputmode="decimal"
+                min="0"
+                step="any"
+                value="3000"
+                placeholder="3000"
+                aria-describedby="income-help"
+              >
+            </div>
+            <span id="income-help" class="sr-only">Enter your monthly net income to calculate budget allocations automatically.</span>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="currency-select">Currency</label>
+            <select id="currency-select" class="calc-select">
+              <option value="USD" selected>$ USD — US Dollar</option>
+              <option value="MMK">K MMK — Myanmar Kyat</option>
+              <option value="THB">฿ THB — Thai Baht</option>
+              <option value="SGD">S$ SGD — Singapore Dollar</option>
+              <option value="INR">₹ INR — Indian Rupee</option>
+              <option value="EUR">€ EUR — Euro</option>
+              <option value="GBP">£ GBP — British Pound</option>
+              <option value="JPY">¥ JPY — Japanese Yen</option>
+            </select>
+          </div>
+
+          <div class="calc-action-group">
+            <button id="calculate-btn" class="btn btn-primary" type="submit">Calculate Plan</button>
+          </div>
+        </form>
+
+        <div class="method-selector-wrap">
+          <div class="method-mobile-wrap">
+            <label class="field-label" for="method-select">Budgeting Method</label>
+            <select id="method-select" class="calc-select">
+              <option value="buddhist" selected>Buddhist Method (25/50/25)</option>
+              <option value="50-30-20">The 50/30/20 Rule</option>
+              <option value="6-jars">The 6 Jars Method</option>
+              <option value="80-20">The 80/20 Rule (Pay Yourself First)</option>
+              <option value="70-20-10">The 70/20/10 Rule</option>
+            </select>
+          </div>
+
+          <div class="method-tabs" role="tablist" aria-label="Choose a budgeting method">
+            <button class="method-tab is-active" type="button" role="tab" aria-selected="true" data-method-tab="buddhist">
+              Buddhist Method (25/50/25)
+            </button>
+            <button class="method-tab" type="button" role="tab" aria-selected="false" data-method-tab="50-30-20">
+              50/30/20 Rule
+            </button>
+            <button class="method-tab" type="button" role="tab" aria-selected="false" data-method-tab="6-jars">
+              6 Jars Method
+            </button>
+            <button class="method-tab" type="button" role="tab" aria-selected="false" data-method-tab="80-20">
+              80/20 Rule
+            </button>
+            <button class="method-tab" type="button" role="tab" aria-selected="false" data-method-tab="70-20-10">
+              70/20/10 Rule
+            </button>
+          </div>
+        </div>
+
+        <div class="results-section" aria-live="polite">
+          <div class="results-header">
+            <div class="results-title-wrap">
+              <h2 id="results-method-title">Buddhist Method (Sigālovāda Sutta 25/50/25)</h2>
+              <p id="results-method-subtitle" class="results-subtitle">
+                Breakdown for $3,000 monthly income — Classical four-part wisdom adapted into a balanced three-bucket monthly allocation.
+              </p>
+            </div>
+            <div class="results-toolbar">
+              <button id="copy-breakdown-btn" class="btn btn-secondary" type="button">Copy Breakdown</button>
+              <span id="copy-feedback" class="copy-feedback" role="status" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div id="results-grid" class="results-grid has-three">
+            <article class="result-card" data-tone="emerald">
+              <div class="result-card-top">
+                <div>
+                  <h3 class="result-card-title">Living Expenses &amp; Generosity</h3>
+                  <p class="result-card-detail">Dāna, daily needs &amp; supporting family</p>
+                </div>
+                <span class="percent-badge">25%</span>
+              </div>
+              <div class="result-amount">$750</div>
+              <div class="progress-track" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-label="Living Expenses and Generosity allocation 25%">
+                <div class="progress-fill" style="width: 25%"></div>
+              </div>
+            </article>
+
+            <article class="result-card" data-tone="gold">
+              <div class="result-card-top">
+                <div>
+                  <h3 class="result-card-title">Work, Business &amp; Personal Growth</h3>
+                  <p class="result-card-detail">Reinvestment, tools &amp; skill building</p>
+                </div>
+                <span class="percent-badge">50%</span>
+              </div>
+              <div class="result-amount">$1,500</div>
+              <div class="progress-track" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Work, Business and Personal Growth allocation 50%">
+                <div class="progress-fill" style="width: 50%"></div>
+              </div>
+            </article>
+
+            <article class="result-card" data-tone="teal">
+              <div class="result-card-top">
+                <div>
+                  <h3 class="result-card-title">Emergency &amp; Future Reserve</h3>
+                  <p class="result-card-detail">Untouched safety net &amp; crisis protection</p>
+                </div>
+                <span class="percent-badge">25%</span>
+              </div>
+              <div class="result-amount">$750</div>
+              <div class="progress-track" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-label="Emergency and Future Reserve allocation 25%">
+                <div class="progress-fill" style="width: 25%"></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="method-insight">
+            <span class="method-insight-label">Who This Works Best For</span>
+            <p id="method-best-for">
+              This method works best for entrepreneurs, freelancers, and growth-minded earners who want to actively reinvest half their income into their livelihood, career, or business. It is equally ideal for household stewards who value steady generosity alongside a disciplined, untouched emergency reserve.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Comparing the 5 Global Budgeting Frameworks</h2>
+        <p>
+          Effective income management is never one-size-fits-all. A salaried employee in Singapore, a small business owner in Yangon, and a freelancer in London face very different cash-flow patterns. By pairing timeless ethical principles with practical modern percentage rules, you can choose a framework that fits your current season of life and switch seamlessly as your goals evolve.
+        </p>
+
+        <div class="method-cards-grid">
+          <article class="info-card">
+            <div>
+              <h3>1. Buddhist Method (25/50/25)</h3>
+              <p>Rooted in the Sigālovāda Sutta: 25% for living and generosity (<em>dāna</em>), 50% reinvested into work or business growth, and 25% locked in reserve.</p>
+            </div>
+            <a class="info-card-link" href="/buddhist-method">Read the Buddhist Method Guide &rarr;</a>
+          </article>
+
+          <article class="info-card">
+            <div>
+              <h3>2. The 50/30/20 Rule</h3>
+              <p>A clear modern standard dividing after-tax pay into 50% essential needs, 30% flexible wants, and 20% dedicated savings or debt reduction.</p>
+            </div>
+            <a class="info-card-link" href="/50-30-20-calculator">Explore the 50/30/20 Guide &rarr;</a>
+          </article>
+
+          <article class="info-card">
+            <div>
+              <h3>3. The 6 Jars Method</h3>
+              <p>A detailed six-bucket structure covering Necessities (55%), Financial Freedom (10%), Long-Term Savings (10%), Education (10%), Play (10%), and Give (5%).</p>
+            </div>
+            <a class="info-card-link" href="/6-jars-calculator">Explore the 6 Jars Guide &rarr;</a>
+          </article>
+
+          <article class="info-card">
+            <div>
+              <h3>4. The 80/20 &amp; 70/20/10 Rules</h3>
+              <p>Simplified "pay yourself first" alternatives. Save 20% immediately with 80/20, or carve out an extra 10% for debt payoff or charity with 70/20/10.</p>
+            </div>
+            <span class="info-card-link">Try both tabs in the calculator above</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>How the Percentage Formulas Work</h2>
+        <p>
+          Percentage-based budgeting eliminates guesswork by scaling automatically with your paycheck. Instead of inventing rigid dollar caps every month, you multiply your net monthly income (after taxes) by each category's target percentage:
+        </p>
+        <p>
+          <strong>Category Allocation = Monthly Net Income &times; (Category Percentage &divide; 100)</strong>
+        </p>
+        <p>
+          Using percentages ensures that whenever your income rises, your savings, emergency reserves, and generosity grow proportionally rather than disappearing into lifestyle inflation. And if you experience an irregular month, the ratios keep your priorities intact without forcing a complicated spreadsheet overhaul.
+        </p>
+
+        <h3>Worked Example: Dividing a $2,000 Monthly Income</h3>
+        <p>
+          Suppose you earn <strong>$2,000</strong> per month after taxes. Here is how your money is allocated side-by-side under three popular frameworks:
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Budgeting Method</th>
+                <th>Essentials / Living</th>
+                <th>Growth / Wants / Play</th>
+                <th>Savings / Reserve / Giving</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Buddhist 25/50/25</strong></td>
+                <td>$500 (25% Living &amp; Generosity)</td>
+                <td>$1,000 (50% Work &amp; Growth)</td>
+                <td>$500 (25% Untouched Reserve)</td>
+              </tr>
+              <tr>
+                <td><strong>50/30/20 Rule</strong></td>
+                <td>$1,000 (50% Needs)</td>
+                <td>$600 (30% Wants)</td>
+                <td>$400 (20% Savings &amp; Debt)</td>
+              </tr>
+              <tr>
+                <td><strong>6 Jars Method</strong></td>
+                <td>$1,100 (55% Necessities)</td>
+                <td>$400 (10% Education + 10% Play)</td>
+                <td>$500 (10% Freedom + 10% LTS + 5% Give)</td>
+              </tr>
+              <tr>
+                <td><strong>70/20/10 Rule</strong></td>
+                <td>$1,400 (70% Living)</td>
+                <td>—</td>
+                <td>$600 (20% Savings + 10% Debt/Give)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Should I enter my gross income or net (take-home) income?</summary>
+            <div class="faq-answer">
+              <p>
+                Always use your <strong>net monthly income</strong>—the amount that actually lands in your bank account after taxes, social contributions, and mandatory payroll deductions. Budgeting from take-home pay ensures your percentage buckets match real spendable cash.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Which budgeting method should a beginner start with?</summary>
+            <div class="faq-answer">
+              <p>
+                If you want the simplest habit possible, start with the <strong>80/20 Rule</strong> (automate 20% into savings on payday and live on 80%). Once you are comfortable tracking essentials versus lifestyle spending, transition to the <strong>50/30/20 Rule</strong> or the <strong>Buddhist 25/50/25 Method</strong> if you run a business or invest heavily in your skills.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is my income data saved or sent to any server?</summary>
+            <div class="faq-answer">
+              <p>
+                No. Every calculation runs 100% locally inside your web browser using client-side JavaScript. Your income numbers and currency selections are never uploaded, stored, or shared with BalanceLedger.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">BalanceLedger</p>
+          <p class="footer-desc">
+            Combining timeless financial wisdom with fast, private, multi-currency budgeting calculators for everyday clarity.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Calculators</h2>
+          <ul class="footer-links">
+            <li><a href="/">All-in-One Calculator</a></li>
+            <li><a href="/buddhist-method">Buddhist 25/50/25 Method</a></li>
+            <li><a href="/50-30-20-calculator">50/30/20 Rule Calculator</a></li>
+            <li><a href="/6-jars-calculator">6 Jars Money Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Company &amp; Legal</h2>
+          <ul class="footer-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 BalanceLedger. Educational budgeting tools for personal planning.</span>
+        <span>Runs 100% locally in your browser.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculator.js"></script>
+  <script src="/js/router.js"></script>
+</body>
+</html>
